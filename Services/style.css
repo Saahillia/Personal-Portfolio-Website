@@ -1,0 +1,192 @@
+:root{
+    --text-color:#f5f5f5;
+    --hover-color: #12f7ff;
+    --bg-color:#250821;
+    --secon-bg-color:#292e33;
+    --big-font:2.5rem;
+    --normal-font:2rem;
+    --neon-bar--shadow:0 0 .5rem #12f7ff;
+    --h2-font:3rem;
+    --font-neon-text-shadow:0 0 10px rgba(18, 247, 255, 0.3 ),
+                            0 0 20px rgba(18, 247, 255, 0.3 ),
+                            0 0 30px rgba(18, 247, 255, 0.3 ),
+                            0 0 40px rgba(18, 247, 255, 0.3 ),
+                            0 0 70px rgba(18, 247, 255, 0.3 ),
+                            0 0 80px rgba(18, 247, 255, 0.3 ),
+                            0 0 100px rgba(18, 247, 255, 0.3 ),
+                            0 0 150px rgba(18, 247, 255, 0.3 );
+}
+        body {
+            /* Ensures the page has the correct background color from your theme */
+            background: var(--bg-color);
+        }
+
+        /* This styles the main heading (e.g., "Database Design") */
+        .main-text {
+            text-align: center;
+        }
+        .main-text h2 {
+            color: var(--hover-color);
+            font-weight: 700;
+            font-size: var(--normal-font);
+        }
+        .main-text span {
+            color: #fdfdfd;
+            font-size: .8rem;
+            font-weight: 200;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* This creates the new neon divider line */
+        .service-divider {
+            border: 0;
+            height: 1px;
+            width: 60%;
+            margin: 3rem auto;
+            background: var(--hover-color);
+            opacity: 0.5;
+            box-shadow: 0 0 15px var(--hover-color);
+        }
+        
+        /* This is the container for the detailed content, without a background */
+        .service-details-content {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem; /* Adds slight padding for smaller screens */
+        }
+
+        /* This styles the subheadings (e.g., "My Database Philosophy") */
+        .service-details-content h4 {
+            color: var(--hover-color);
+            font-size: 1.8rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--hover-color);
+            padding-left: 15px;
+        }
+
+        /* This styles the regular paragraph text */
+        .service-details-content p {
+            color: #bdbdbd;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            padding-left: 19px; /* Aligns text with the heading's text */
+        }
+
+        /* This styles the bullet point list */
+        .service-details-content ul {
+            list-style: none;
+            padding-left: 19px; /* Aligns list with the heading's text */
+            margin-bottom: 1rem;
+        }
+        .service-details-content li {
+            color: #bdbdbd;
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            padding-left: 25px;
+            position: relative;
+        }
+        /* This creates the custom neon bullet point */
+        .service-details-content li::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            top: -2px;
+            font-size: 1.5rem;
+            color: var(--hover-color);
+        }
+
+        /* This makes the bolded text stand out */
+        .service-details-content strong {
+            color: #f5f5f5;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+
+
+        /* This pushes the entire section down from the top edge */
+        .service-details {
+             padding-top: 50px;
+             padding-bottom: 50px;
+        }
+
+/* =================================================== */
+/* Responsive Styles for Tablet & Mobile             */
+/* =================================================== */
+
+/* For Tablets */
+@media (max-width: 991px) {
+    :root {
+        --big-font: 2.2rem;
+        --normal-font: 1.8rem;
+    }
+
+    .service-details {
+        padding-top: 70px;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .service-divider {
+        margin: 2.5rem auto;
+        width: 70%;
+    }
+
+    .service-details-content h4 {
+        font-size: 1.6rem;
+    }
+
+    .service-details-content p,
+    .service-details-content li,
+    .service-details-content strong {
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+}
+
+/* For Mobile Phones */
+@media (max-width: 768px) {
+    :root {
+        --normal-font: 1.6rem;
+    }
+
+    .service-details {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    .service-divider {
+        width: 80%;
+        margin: 2rem auto;
+    }
+    
+    .service-details-content {
+        margin: 1rem auto;
+    }
+
+    .service-details-content h4 {
+        font-size: 1.4rem;
+        padding-left: 10px;
+    }
+
+    .service-details-content p {
+        font-size: 1rem;
+        padding-left: 14px;
+    }
+    
+    .service-details-content ul {
+        padding-left: 14px;
+    }
+
+    .service-details-content li,
+    .service-details-content strong {
+        font-size: 1rem;
+    }
+
+    .service-details-content li {
+        padding-left: 20px;
+    }
+}
